@@ -1,0 +1,90 @@
+Opening
+"Good [morning/afternoon], everyone! Before we dive in, quick question—how many of you have ever wondered why your favorite dish suddenly disappears from the menu? Or why some restaurants always seem packed while others are empty? Today, we’re going to uncover those secrets with… DISHCOVERY!"
+(Pause for reactions, smile)
+Slide 1 – Title
+"Welcome to DISHCOVERY—where we turn restaurant data into delicious insights! Think of us as the chefs of analytics, cooking up insights that help businesses thrive."
+Slide 2 – Team
+"Here’s the dream team behind this project—Jaspreet, Rashi, Garima, Manas, Rimi, and Rachana. We’ve been slicing, dicing, and sautéing data to serve you something amazing today!"
+(Add a playful comment: “Yes, we promise no actual onions were harmed during this process!”)
+Slide 3 – Introduction
+"So what’s DISHCOVERY all about? Imagine a dashboard that tells you which dishes are stars, which outlets are rocking, and where customers are craving more. That’s what we built using Power BI—clear, actionable insights for smarter decisions."
+Slide 4 – Agenda
+*"Here’s our recipe for today:
+A quick overview
+Our secret sauce—methodology
+Key insights that will make you go ‘Wow!’
+Ready? Let’s dig in!"*
+Slide 5 – Overview
+"We started with some big questions: What drives peak sales? Which menu items are underperforming? And how does location impact revenue? Basically, we wanted to know—what makes a restaurant tick?"
+(Engage audience: “Any guesses on what the biggest revenue driver might be? Hint: It’s not just the food!”)
+Slide 6 – Methodology
+*"Our process was like prepping for a gourmet meal:
+First, we cleaned the data—because no one likes messy ingredients!
+Then, we modeled it into a star schema—our Michelin-star approach!
+Finally, we visualized everything in Power BI dashboards. And yes, we sprinkled some DAX magic on top for those tasty KPIs."*
+Slide 7 – Tools
+"Our kitchen tools? Excel for chopping and cleaning, Power BI for plating and presentation. Simple, but powerful!"
+Slide 8 – Key Insights
+*"Here’s where it gets exciting:
+Which outlets are performing like celebrity chefs?
+What’s trending on the menu?
+How customers behave when they’re hungry!
+Spoiler alert: Some dishes are total divas—they hog the spotlight!"*
+Slide 9–10 – Data & Warehouse
+"Behind the scenes, we built a data warehouse with dimensions for menu, outlets, customers, and staff. Think of it as our pantry—everything neatly organized for quick access."
+Dashboard Slides (12–21)
+*"Now, feast your eyes on these dashboards!
+Sales trends—who’s making the dough?
+Orders—what’s flying off the shelves?
+Customers—who’s loyal and who’s just window-shopping?
+Menu—what’s hot and what’s not!"*
+(Add humor: “Warning: Looking at these charts might make you hungry!”)
+Slide 22 – Conclusion
+"In short, we turned raw data into a five-star experience. Cleaned, modeled, visualized—and served insights that help restaurants make smarter, tastier decisions."
+Closing
+"Thank you for joining us on this delicious journey! Any questions? Or should we take orders for your favorite dashboard next?"
+(Optional fun poll: “If you could add one dish to our dashboard, what would it be?”)
+ 
+Opening
+"Hello everyone! Quick question—what’s the secret ingredient behind a restaurant’s success? Is it the chef’s magic? The menu? Or maybe… the data? Today, we’re going to find out with DISHCOVERY—where analytics meets appetite!"
+(Pause for smiles)
+Slide 1 – Title
+"Welcome to DISHCOVERY—our Power BI project that transforms raw numbers into tasty insights. Think of us as data chefs, cooking up dashboards instead of dishes!"
+Slide 2 – Team
+"Here’s the team that made it happen—Jaspreet, Rashi, Garima, Manas, Rimi, and Rachana. We’ve been crunching numbers like they were crispy fries!"
+Slide 3 – Introduction
+"DISHCOVERY is all about using analytics to answer big questions: Which dishes are stars? Which outlets are lagging? And how do customer behaviors shape revenue? Our dashboard is the recipe for smarter decisions."
+Slide 4 – Agenda
+*"Our menu for today:
+Overview of the business questions
+Our methodology—how we cleaned, modeled, and visualized data
+Key insights that will make you rethink restaurant strategy!"*
+Slide 5 – Overview
+"We started with questions like: What drives peak sales? Which menu items underperform? How does location impact revenue? These aren’t just guesses—they’re analytics-driven answers."
+(Engage audience: “Any guesses on which factor matters most—location, menu, or customer loyalty?”)
+Slide 6 – Methodology
+*"Our process was like a data recipe:
+Data Cleaning: Removed duplicates, handled nulls—because bad data is like stale bread!
+Modeling: Built a star schema—our Michelin-star approach to structure.
+Visualization: Interactive dashboards in Power BI.
+DAX Measures: For KPIs like revenue growth and retention."*
+Slide 7 – Tools
+"Our toolkit? Excel for prep, Power BI for the magic. Together, they turned raw data into a gourmet analytics experience."
+Slide 8 – Key Insights
+*"Here’s the juicy part:
+Which outlets are top performers?
+What menu items are trending?
+How customer behavior impacts sales.
+Spoiler: Some dishes are analytics superstars!"*
+Dashboard Slides
+*"Now, let’s look at the dashboards:
+Sales Trends: Who’s making the dough?
+Orders: What’s flying off the shelves?
+Customers: Who’s loyal and who’s just browsing?
+Menu Analysis: What’s hot and what’s not!"*
+(Add humor: “Warning: These charts might make you hungry!”)
+Slide 22 – Conclusion
+"In short, we turned raw operational data into actionable insights. Cleaned, modeled, visualized—and served analytics that help restaurants make smarter decisions."
+Closing
+"Thank you for joining us on this data-driven journey! Any questions? Or should we start forecasting your favorite dish next?"
+(Optional poll: “If you could predict one trend in food analytics, what would it be?”)
