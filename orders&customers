@@ -1,0 +1,104 @@
+Orders + Customers Script (3 speakers, equal split)
+Speaker 1 (Orders Part 1 + Customers Part 1)
+Slide 16–17: Orders (Part 1)
+
+“Now we’re in Orders—this tells us demand: what people are ordering and how that demand behaves.
+
+At the top, we’ve used summary cards to give a quick pulse:
+
+Total Orders (5K) tells overall demand under the current filters.
+
+Average Order Value (₹956.94) is calculated using a measure like:
+AOV = DIVIDE([Total Revenue], [Total Orders])
+We use DIVIDE() so it stays safe even when filters create a zero-orders scenario.
+
+Orders per Outlet (999.80) is a fairness metric: it normalizes orders by outlet count, so a city with more outlets doesn’t look “better” just because of scale.
+Orders per Outlet = DIVIDE([Total Orders], DISTINCTCOUNT(DimOutlets[outlet_id]))
+
+YoY Orders % (50.03%) compares performance to last year’s same period so seasonality doesn’t mislead us.
+Typical approach: SAMEPERIODLASTYEAR() with the date table.
+
+Now look at Orders Over Time—we show Total Orders and Cumulative Orders together.
+Total Orders shows the year-wise trend, while cumulative tells momentum—whether we’re consistently building volume over time, not just spiking randomly.”
+
+Slide 18–19: Customers (Part 1)
+
+“Switching to Customers, we again start with cards—quick health check of the customer base:
+
+Total Customers (1K) is a distinct customer count, so repeat purchases don’t inflate customer count:
+Total Customers = DISTINCTCOUNT(DimCustomers[cust_id])
+
+Average Rating (4.10) captures customer satisfaction, which impacts retention.
+
+Now on the left: Top 3 Satisfied Customers.
+We included this because loyalty programs and outlet teams need real names/segments to action—these are high-engagement customers worth retaining.
+This visual is driven by a measure like Orders per Customer and sorted by rating/orders so it always stays correct under filters.”
+
+Speaker 2 (Orders Part 2 + Customers Part 2)
+Slide 17: Orders (Part 2)
+
+“I’ll take the middle part of the Orders dashboard—where we explain what drives those order numbers.
+
+First, notice the Category slicer (Chinese/Indian/Italian). We added it so stakeholders can instantly answer:
+‘Is the growth coming from one cuisine type or overall demand?’
+Because of our star schema, the slicer filters all visuals consistently through FactSales.
+
+Now: Total Orders by Item Name.
+This is a straight decision-maker chart—top ordered items drive inventory planning, prep priorities, and promotions.
+We typically use a ranking/top-items approach (like RANKX) so the “top dishes” remain dynamic when filters change.
+
+Next: Total Orders by Day.
+This helps operations: staffing, kitchen load, and peak-day planning.
+We used a trend/area chart because you can see volatility and peaks instantly—a table wouldn’t show that pattern as clearly.”
+
+Slide 19: Customers (Part 2)
+
+“On Customers, I’ll cover the Repeat Customer % (1.49) and the Customer Retention Trend.
+
+Repeat Customer % is defined very cleanly:
+
+Identify customers whose order count is greater than 1
+
+Divide by total customers
+
+Typical DAX pattern:
+
+Orders by Customer = CALCULATE([Total Orders]) in customer context
+
+Repeat Customers = COUNTROWS(FILTER(VALUES(DimCustomers[cust_id]), [Orders by Customer] > 1))
+
+Repeat Customer % = DIVIDE([Repeat Customers], [Total Customers])
+
+Now the Retention Trend chart shows Repeat Customer % along with Repeat Customer Orders.
+We used both because % alone can mislead when the total customer base changes, and orders alone can mislead when volume changes. Together, they give a solid retention story that’s hard to “counter-question.”
+For example, if repeat % drops but repeat orders are stable, it usually means new customers increased.”
+
+Speaker 3 (Orders Part 3 + Customers Part 3)
+Slide 17: Orders (Part 3)
+
+“I’ll finish Orders with the segmentation and category contribution visuals.
+
+Orders by Age Group answers: who drives volume?
+We used age groups because business teams can act on it—targeted combos, offers, and timing campaigns.
+
+Next: Total Orders and Total Revenue by City.
+This is important because volume and value are different. A city can have high orders but lower revenue if baskets are smaller or items are cheaper.
+That’s why we paired orders with revenue—to avoid misleading conclusions.
+
+Finally: Orders by Category is a waterfall-style view.
+The reason we chose this is it explains contribution step-by-step: which category adds to total orders and which pulls it down.
+It’s not just “who is highest,” it’s “who changes the total and by how much.” That’s exactly what managers ask.”
+
+Slide 19: Customers (Part 3)
+
+“Now I’ll close Customers with behavior and value.
+
+The AOC card (2)—Average Order Count—tells typical purchase frequency.
+We calculate it as an average at customer level so a few heavy buyers don’t distort it:
+AOC = AVERAGEX(VALUES(DimCustomers[cust_id]), [Orders by Customer])
+
+Then we have Total Orders by Age (by exact ages).
+This is more granular than age groups and helps detect patterns like: certain ages ordering consistently more.
+
+Finally: Revenue by Age Group donut shows who brings money, not just orders.
+We used this because the highest-order segment isn’t always the highest-value segment—this is what helps decide premium offers vs discount offers.”
