@@ -1,0 +1,28 @@
+INTRO--
+
+Behind the scenes, we built a data warehouse with dimensions for menu, outlets, customers, and staff. Think of it as our pantry—everything neatly organized for quick access.
+ 
+**Slide 9 – Dataset Summary (Data Collection)**
+
+To stock that pantry, we first collected four main “ingredients.”
+
+One: **Items**—this is our menu hierarchy: category, sub-category, pricing, and cost. So every dish has a clear identity and a price tag.
+Two: **Outlets**—where the food is being served: location details and operational age, so we can compare a new outlet versus an established one.
+Three: **Customers**—demographics, visit frequency, and ratings, which helps us connect satisfaction with spending patterns.
+And four: **Sales**—the most important one: transactional-level data with quantities and order totals—basically the “receipt” for every purchase.
+ 
+*(Quick audience moment)* If you think about it, without clean receipts and clear labels, even the best chef can’t tell what’s selling… and what’s just taking up shelf space.
+ 
+**Slide 10 – Data Warehouse Design (Star Schema)**
+
+Next, we organized everything into a structure that’s perfect for analysis. At the center, we have **FactSales**—our logbook of what happened. Each row captures *who bought (customer), what they bought (menu item), where (outlet), when (sale date), and even who handled it (staff)*—along with the key numbers like counts and amounts.
+Around it, our dimension tables—**DimMenu, DimOutlets, DimCustomers, and DimStaff**—work like labeled jars in the pantry. They hold the descriptive details, while FactSales holds the measurable “activity.” That separation is what keeps analysis fast, clean, and consistent.
+ 
+**Slide 11 – Model View in Power BI (How it connects)**
+
+And here you can actually see it working: each dimension connects *one-to-many* into FactSales. So when we filter by “one outlet,” “one category,” or “one customer group,” the model instantly shows the matching sales—no confusion, no messy joins.
+This is also how we avoid double-counting and keep KPIs reliable when building DAX measures—because everything is connected through one trusted sales table in the middle.
+ 
+So once this warehouse is in place, the dashboards you’re about to see aren’t just pretty charts—they’re pulling answers from a well-organized backend, in seconds.
+ 
+Now, feast your eyes on these dashboards!
