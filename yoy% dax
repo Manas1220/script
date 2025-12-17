@@ -1,0 +1,11 @@
+YoY Orders % = IF(
+	ISFILTERED('FactSales'[Sale_Date]),
+	ERROR("Time intelligence quick measures can only be grouped or filtered by the Power BI-provided date hierarchy or primary date column."),
+	VAR __PREV_YEAR =
+		CALCULATE(
+			COUNTA('FactSales'[item_id]),
+			DATEADD('FactSales'[Sale_Date].[Date], -1, YEAR)
+		)
+	RETURN
+		DIVIDE(COUNTA('FactSales'[Sale_Date]) - __PREV_YEAR, __PREV_YEAR)
+)
