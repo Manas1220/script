@@ -1,0 +1,42 @@
+KPI Cards – What the business looks like at a glance
+🔸 Average Order Value – ₹956.94
+“This card shows how much revenue we earn from one order on average.
+👉 DAX used:
+Average Order Value =
+DIVIDE ( [Total Sales],
+        DISTINCTCOUNT ( FactSales[sale_id] ) )
+👉 Logic:
+First, we calculate total sales
+Then we divide it by unique order IDs
+DISTINCTCOUNT avoids duplicate orders
+DIVIDE prevents divide-by-zero errors
+📌 What this tells us:
+Customers spend around ₹957 per order, which shows healthy spending behavior.”
+🔸 Orders per Outlet – 999.80
+“This metric tells us how busy each outlet is.
+👉 DAX used:
+Orders per Outlet =
+DIVIDE ( [Total Orders], [Distinct Outlets] )
+👉 Logic:
+Total orders divided by total outlets
+Used to measure outlet efficiency
+📌 Result:
+Each outlet is handling almost 1000 orders, which indicates excellent outlet utilization.”
+🔸 YoY Orders % – 50.03%
+“This KPI shows how orders have grown compared to last year.
+👉 DAX logic:
+Count current year orders
+Use DATEADD to fetch previous year orders
+Calculate growth percentage
+📌 Result:
+A 50% increase in orders, which is a very strong growth indicator.”
+🔸 Total Orders – 5K
+“This simply shows how many orders are present in the dataset.
+👉 DAX used:
+Total Orders = COUNTROWS ( FactSales )
+📌 Result:
+With 5000 orders, our analysis is data-rich and reliable.”
+ 
+“This vertical slicer allows us to filter the entire dashboard by categories like indian, chinese and italian."
+ 
+ 
